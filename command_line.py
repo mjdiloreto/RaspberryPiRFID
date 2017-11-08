@@ -1,5 +1,5 @@
 import cmd
-from save_funcs import *
+import save_funcs as sf
 
 class RFID_Cmd(cmd.Cmd):
 
@@ -16,7 +16,7 @@ class RFID_Cmd(cmd.Cmd):
         lastName = input('Enter last name:')
         ex = input('Enter directory to csv file:')
         # ex = "example.csv"
-        save_funcs.save(ex,lastName,firstName,nuID)
+        sf.save(ex,lastName,firstName,nuID)
 
 if __name__ == '__main__':
     c = RFID_Cmd()
